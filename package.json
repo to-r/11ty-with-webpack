@@ -15,7 +15,8 @@
     "format": "prettier --write **/*.{js,scss,json}",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --fix './src/assets/webpack/**/*.js'",
-    "lint:scss": "stylelint --fix './src/assets/webpack/**/*.scss'"
+    "lint:scss": "stylelint --fix './src/assets/webpack/**/*.scss'",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -28,6 +29,8 @@
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jquery": "^1.5.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.2",
     "mini-css-extract-plugin": "^2.5.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
@@ -43,5 +46,11 @@
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-manifest-plugin": "^4.1.1"
+  },
+  "lint-staged": {
+    "src/assets/webpack/**/*.{js,scss}": [
+      "yarn format",
+      "yarn lint"
+    ]
   }
 }
