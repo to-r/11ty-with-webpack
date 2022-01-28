@@ -1,0 +1,21 @@
+{
+  "name": "eleventy-with-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Katsushi OUGI <ougi@to-r.net>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development npm-run-all clean --parallel start:*",
+    "start:11ty": "eleventy --serve",
+    "build": "cross-env NODE_ENV=production npm-run-all clean build:*",
+    "build:11ty": "eleventy",
+    "clean": "rimraf _site dictionary.json"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  }
+}
