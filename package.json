@@ -49,11 +49,11 @@
     "webpack-manifest-plugin": "^4.1.1"
   },
   "lint-staged": {
-    "src/assets/webpack**/*.js": [
+    "src/assets/webpack/**/*.js": [
       "prettier --write --loglevel=error",
       "eslint --fix --quiet"
     ],
-    "src/assets/webpack**/*.scss": [
+    "src/assets/webpack/**/*.scss": [
       "prettier --write --loglevel=error",
       "stylelint --fix --quiet"
     ]
