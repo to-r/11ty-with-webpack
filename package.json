@@ -51,9 +51,6 @@
     "webpack-manifest-plugin": "^4.1.1"
   },
   "lint-staged": {
-    "_site/**/*.html": [
-      "htmlhint"
-    ],
     "src/assets/webpack/**/*.js": [
       "prettier --write --loglevel=error",
       "eslint --fix --quiet"
