@@ -34,6 +34,14 @@ yarn build
 - ソースファイルは `src/assets/webpack/styles` 以下に配置してください。
 - stylelint を導入しています。
 
+## リンターの実行
+
+`yarn lint` で eslint, stylelint, htmlhint が実行されます。
+
+## フォーマッタの実行
+
+`yarn format` で JS ファイルと SCSS ファイルに対して prettier が実行されます。
+
 ## pre-commit
 
 - コミットを実行すると、prettier と各種 lint が実行されます。エラーになるとコミットがされません。
