@@ -1,3 +1,9 @@
 body {
   background: #ccc;
 }
+
+.hoge {
+  &__fuga {
+    color: red;
+  }
+}
