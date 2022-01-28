@@ -13,7 +13,9 @@
     "build:webpack": "webpack",
     "clean": "rimraf _site",
     "format": "prettier --write **/*.{js,scss,json}",
-    "lint:js": "eslint --fix './src/assets/webpack/**/*.js'"
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint --fix './src/assets/webpack/**/*.js'",
+    "lint:scss": "stylelint --fix './src/assets/webpack/**/*.scss'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
@@ -35,6 +37,9 @@
     "rimraf": "^3.0.2",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
+    "stylelint": "^14.3.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-scss": "^5.0.2",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-manifest-plugin": "^4.1.1"

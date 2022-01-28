@@ -10,6 +10,7 @@
   "editor.wordWrap": "on",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "stylelint.validate": ["scss"],
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
