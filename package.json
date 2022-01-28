@@ -14,6 +14,7 @@
     "clean": "rimraf _site",
     "format": "prettier --write **/*.{js,scss,json}",
     "lint": "npm-run-all lint:*",
+    "lint:html": "htmlhint ./_site/**/*.html",
     "lint:js": "eslint --fix './src/assets/webpack/**/*.js'",
     "lint:scss": "stylelint --fix './src/assets/webpack/**/*.scss'",
     "lint-staged": "lint-staged",
@@ -30,6 +31,7 @@
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jquery": "^1.5.1",
+    "htmlhint": "^1.1.2",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.2",
     "mini-css-extract-plugin": "^2.5.3",
@@ -49,6 +51,9 @@
     "webpack-manifest-plugin": "^4.1.1"
   },
   "lint-staged": {
+    "_site/**/*.html": [
+      "htmlhint"
+    ],
     "src/assets/webpack/**/*.js": [
       "prettier --write --loglevel=error",
       "eslint --fix --quiet"
