@@ -1,5 +1,6 @@
 const PostCSSPresetEnv = require('postcss-preset-env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -13,7 +14,10 @@ module.exports = {
     filename: 'main.js'
   },
 
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new WebpackManifestPlugin({ fileName: 'manifest.json' }),
+    new MiniCssExtractPlugin(),
+  ],
 
   module: {
     rules: [

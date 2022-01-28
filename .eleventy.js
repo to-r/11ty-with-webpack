@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = (config) => {
-  const manifestPath = path.resolve(__dirname, '_site/manifest.json')
+  const manifestPath = path.resolve(__dirname, '_site/assets/webpack/manifest.json')
 
   config.addPassthroughCopy('src/assets/static')
 
